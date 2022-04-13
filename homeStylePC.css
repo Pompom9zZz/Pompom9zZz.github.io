@@ -1,0 +1,306 @@
+/** Color and general style **/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    max-width: 100vw;
+}
+
+@font-face {
+    font-family: 'comfortaaregular';
+    src: url('FONT/webfontkit-20220318-060356/comfortaa-regular-webfont.woff2') format('woff2'), url('FONT/webfontkit-20220318-060356/comfortaa-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav {
+    /* On the top of all things, always visible*/
+    position: fixed;
+    z-index: 100;
+    min-width: 100%;
+    max-height: 6vh;
+    background-color: rgba(39, 39, 39, 0.9);
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: color ease-in-out 0.5s;
+}
+
+nav ul li a.active {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    transition: color ease-in-out 0.5s;
+}
+
+header h1 {
+    font-family: comfortaaregular;
+    text-shadow: 0px 3px 2px rgba(204, 0, 255, 0.616);
+}
+
+figure figcaption {
+    font-family: comfortaaregular;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    background-color: rgba(255, 0, 0, 0.219);
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 85vw;
+    background-color: rgba(58, 58, 58, 0.9);
+    margin-top: 2vh;
+}
+
+header {
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    min-width: 85vw;
+    align-items: center;
+}
+
+
+/** autre **/
+
+h1 {
+    align-items: center;
+    color: white;
+    text-shadow: 0px 3px 2px rgb(255, 0, 0);
+    font-size: 2em;
+    font-family: 'comfortaaregular';
+}
+
+h2 {
+    align-items: center;
+    color: white;
+    font-size: 1.7em;
+    font-style: bold;
+    font-family: 'comfortaaregular';
+    text-shadow: 0px 3px 2px blue;
+}
+
+h3 {
+    font-style: bold;
+    font-family: 'comfortaaregular';
+    color: white;
+    align-items: center;
+}
+
+section .blockDeTrois {
+    border-top: solid 1px white;
+}
+
+section .blockDeTrois~.blockDeTrois {
+    border-top: none;
+}
+
+#contact a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+
+/** PC Adjustements **/
+
+@media screen and (min-width: 767px) {
+    /** Structure de la page**/
+    .row-span2 {
+        display: flex;
+        flex-direction: row;
+    }
+    .col-span {
+        display: flex;
+        flex-grow: 0;
+        flex-direction: column;
+    }
+    .row-span {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-arround;
+        align-items: center;
+    }
+    /** #region**/
+    /**Menu style**/
+    nav {
+        max-height: 6vh;
+    }
+    nav .menu-row-span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        min-width: 100%;
+        max-height: 100%;
+        justify-content: space-between;
+    }
+    nav .menu,
+    nav .contact {
+        margin-left: 1vw;
+        margin-right: 1vw;
+        align-items: center;
+    }
+    nav .menu ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    nav .contact ul {
+        display: flex;
+        justify-content: space-around;
+        margin: 0px;
+        top: -2.5vh;
+    }
+    nav ul li {
+        display: flex;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+    nav ul li a img {
+        height: 5vh;
+        width: 5vh;
+        border-radius: 50%;
+    }
+    /** #endregion**/
+    #about h3 {
+        padding-left: 1vw;
+    }
+    #aboutTitle {
+        font-size: 1.5em;
+    }
+    #about img {
+        width: 10em;
+        height: auto;
+        border-radius: 50%;
+    }
+    /** Bouton avec flou pour chaque projet **/
+    section {
+        padding-top: 5vh;
+    }
+    section .blockDeTrois {
+        display: flex;
+        flex-direction: column;
+        max-width: 100vw;
+    }
+    .bt {
+        width: 33%;
+        height: auto;
+        text-decoration: none;
+        padding-top: 1vh;
+    }
+    figure img {
+        width: 100%;
+        height: auto;
+    }
+    /** contact **/
+    #contact img {
+        width: 2vw;
+        height: auto;
+        border-radius: 100%;
+        margin-right: 1vw;
+    }
+    /** Footer **/
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 85vw;
+        background-color: rgba(39, 39, 39, 0.9);
+        margin-top: 2vh;
+    }
+    footer h3 {
+        font-size: 1em;
+    }
+}
+
+
+/** Phone and Tablet Adjustements **/
+
+@media screen and (max-width: 767px) {
+    .row-span,
+    .row-span2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .col-span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav .menu-row-span {
+        display: flex;
+        flex-direction: row;
+    }
+    nav .menu {
+        min-width: 100%;
+        align-items: center;
+    }
+    nav .menu ul {
+        padding-left: 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0px;
+    }
+    nav .menu ul li {
+        margin: 0.5em;
+    }
+    nav .menu ul li a {
+        font-size: 0.8em;
+    }
+    img {
+        max-width: 75vw;
+        margin-right: 1vw;
+    }
+    section {
+        max-width: 100%;
+    }
+    nav .contact {
+        display: none;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    #about #aboutTitle {
+        align-self: center;
+        font-size: 1.5em;
+    }
+    #about img {
+        width: 10em;
+        height: auto;
+        border-radius: 50%;
+    }
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-top: 1px solid white;
+    }
+    #contact img {
+        width: 4vw;
+        height: auto;
+        border-radius: 100%;
+        margin-right: 1vw;
+    }
+    footer {
+        margin: 0px;
+        padding: 0px;
+    }
+}
