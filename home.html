@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="./homeStylePC.css" rel="stylesheet">
+    <script language="javascript" type="text/javascript" src="menu.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="part.js"></script>
+    <script language="javascript" type="text/javascript" src="sketch.js"></script>
+    <title>Home</title>
+    <style>
+        canvas {
+            position: fixed !important;
+            top: 0px;
+            left: 0;
+            margin-top: 0px;
+            z-index: -100;
+        }
+    </style>
+</head>
+
+<body onresize="setup()" onscroll="updateMenu()">
+
+    <!-- Menu en haut-->
+    <nav>
+        <div class="menu-row-span">
+            <div class="menu">
+                <ul>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#java">Java</a></li>
+                    <li><a href="#web">Web</a></li>
+                    <li><a href="#bash">Bash</a></li>
+                    <li><a href="#robot">Robotic</a></li>
+                    <li><a href="#other">Other</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Pompom9zZz"><img src="IMG/github.png" /> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="col-span">
+        <!-- En tete-->
+        <header>
+            <h1>My works</h1>
+            <h3>By Tom Fourcaudot</h3>
+        </header>
+        <!--Corps de la page-->
+        <!-- Une section-->
+        <section id="about">
+            <h1>Tom FOURCAUDOT</h1>
+            <h3 id="aboutTitle">An international developper</h3>
+            <div class="row-span">
+                <img src="IMG/pdpPortofolio.jpg" alt="Tom" />
+                <div class="col-span">
+                    <h3>
+                        A french developper who loves to code multiples things. Curently studying at the university of Bordeaux.<br> I'm curently coding whith multiples langages likes Java, Python, SQL, HTML, CSS, Javascript, Bash.<br> I also like making
+                        some robot, so i learn the C programming language to make robots with arduino cards<br> and I also use python to program robots with a Raspberry Pi.
+                    </h3>
+                    <h3>
+                        In my free time, I play drums and I learn foreign langages. I improve my English and I'm actually learning Japanese.<br> I learn these langages to work all arround the world.
+                    </h3>
+                </div>
+            </div>
+        </section>
+        <section id="java">
+            <div class="sectionTitle">
+                <h1>Java projects</h1>
+            </div>
+            <div class="blockDeTrois">
+                <div class="row-span2">
+                    <div class="bt" onclick="loadRetex('RetexPDF/AiLowatem.pdf', 'AI Lowatem')">
+                        <a >
+                            <figure>
+                                <img src="IMG/IALowatem.jpg" alt="AI Lowatem">
+                                <figcaption>AI Lowatem</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="bt" onclick="loadRetex('RetexPDF/Lowatem.pdf', 'Lowatem')">
+                        <a >
+                            <figure>
+                                <img src="IMG/lowatem.png" alt="Lowatem">
+                                <figcaption>Lowatem</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="bt" onclick="loadRetex('RetexPDF/Pong.pdf', 'Pong')">
+                        <a >
+                            <figure>
+                                <img src="IMG/pong.png" alt="Pong">
+                                <figcaption>Pong</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="blockDeTrois">
+                <div class="row-span2">
+                    <div class="bt" onclick="loadRetex('RetexPDF/InversedKinematics.pdf', 'Inversed Kinematics challenge')">
+                        <a >
+                            <figure>
+                                <img src="IMG/InvKine.png" alt="Inversed Kinematics">
+                                <figcaption>Inversed Kinematics challenge</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="bt" onclick="loadRetex('RetexPDF/PerlinNoise.pdf', 'Perlin noise challenge')">
+                        <a >
+                            <figure>
+                                <img src="IMG/3dTerrain.png" alt="Perlin Noise">
+                                <figcaption>Perlin noise challenge</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="bt" onclick="loadRetex('RetexPDF/ProcessingGame.pdf', 'Game to teach processing')">
+                        <a >
+                            <figure>
+                                <img src="IMG/Snek.png" alt="Processing Teaching">
+                                <figcaption>Game to teach processing</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--Fin d'une section-->
+        <!--Début section-->
+        <section id="web">
+            <div class="sectionTitle">
+                <h1>Web projects</h1>
+            </div>
+            <div class="blockDeTrois">
+                <div class="row-span2">
+                    <div class="bt" onclick="loadRetex('RetexPDF/WebsiteCompany.pdf', 'Website creation for company')">
+                        <a >
+                            <figure>
+                                <img src="IMG/SaeWeb.png" alt="Website creation">
+                                <figcaption>Website creation for company</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="bt" onclick="loadRetex('RetexPDF/Portfolio.pdf', 'Portfolio')">
+                        <a >
+                            <figure>
+                                <img src="IMG/Portfolio.png" alt="Portfolio">
+                                <figcaption>Portfolio</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="bt" onclick="loadRetex('RetexPDF/FrontendApp.pdf', 'Frontend web application')">
+                        <a >
+                            <figure>
+                                <img src="IMG/OneShot.png" alt="Web app">
+                                <figcaption>Frontend web application</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="blockDeTrois">
+                <div class="row-span2">
+                    <div class="bt" onclick="loadRetex('RetexPDF/JSCanva.pdf', 'Animated JS canva challenge')">
+                        <a >
+                            <figure>
+                                <img src="IMG/JsCanva.png" alt="JS Canva">
+                                <figcaption>Animated JS canva challenge</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin section-->
+        <!--Début section-->
+        <section id="bash">
+            <div class="sectionTitle">
+                <h1>Bash projects</h1>
+            </div>
+            <div class="blockDeTrois">
+                <div class="row-span2">
+                    <div class="bt" onclick="loadRetex('RetexPDF/VM.pdf', 'Virtual Machine')">
+                        <a >
+                            <figure>
+                                <img src="IMG/machineVirtuelle.png" alt="Virtual Machine">
+                                <figcaption>Virtual Machine</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="bt" onclick="loadRetex('RetexPDF/AnimatedBG.pdf', 'Animated background')">
+                        <a >
+                            <figure>
+                                <img src="IMG/backProject.png" alt="Bash Background">
+                                <figcaption>Animated background challenge</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin section-->
+        <!--Début section-->
+        <section id="robot">
+            <div class="sectionTitle">
+                <h1>Robotics projects</h1>
+            </div>
+            <div class="blockDeTrois">
+                <div class="row-span2">
+                    <div class="bt" onclick="loadRetex('RetexPDF/RobotHand.pdf', 'Robotic hand')">
+                        <a >
+                            <figure>
+                                <img src="IMG/Robothand.jpg" alt="Robot Hand">
+                                <figcaption>Robotic hand</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="bt" onclick="loadRetex('RetexPDF/Holonomic.pdf', 'Holonomic robot')">
+                        <a >
+                            <figure>
+                                <img src="IMG/holonome.png" alt="Holonomic Robot">
+                                <figcaption>Holonomic robot</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin section-->
+        <!--Début section-->
+        <section id="other">
+            <div class="sectionTitle">
+                <h1>Other projects</h1>
+            </div>
+            <div class="blockDeTrois">
+                <div class="row-span2">
+                    <div class="bt" onclick="loadRetex('RetexPDF/Database.pdf', 'Database creation')">
+                        <a >
+                            <figure>
+                                <img src="IMG/BD.jpg" alt="Database">
+                                <figcaption>Database creation</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="bt" onclick="loadRetex('RetexPDF/Company.pdf', 'Company creation')">
+                        <a >
+                            <figure>
+                                <img src="IMG/logo.png" alt="Database">
+                                <figcaption>Company creation</figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin d'une section-->
+        <section id="contact">
+            <h1>Contact</h1>
+            <h3>
+                <a href="mailto: tom.fourcaudot@gmail.com"><img src="IMG/mail.png" />tom.fourcaudot@gmail.com</a>
+            </h3>
+            <h3>
+                <a href="https://github.com/Pompom9zZz"><img src="IMG/github.png" />github</a>
+            </h3>
+        </section>
+        <footer>
+            <h3>© Tom FOURCAUDOT</h3>
+            <h3>All rights reserved</h3>
+        </footer>
+    </div>
+</body>
+</html>
